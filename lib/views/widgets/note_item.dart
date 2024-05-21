@@ -13,7 +13,7 @@ class NoteItem extends StatelessWidget {
         left: 15,
       ),
       decoration: BoxDecoration(
-        color: Colors.yellow,
+        color: const Color.fromARGB(250, 187, 178, 100),
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
