@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/constants.dart';
+import 'package:notes_app/widgets/custom_button.dart';
 import 'package:notes_app/widgets/custom_text_field.dart';
 
 class CustomBottomSheet extends StatelessWidget {
@@ -10,13 +12,22 @@ class CustomBottomSheet extends StatelessWidget {
       width: double.infinity,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 25),
-        child: Column(
-          children: [
-            SizedBox(
-              height: 30,
-            ),
-            CustomTextField(),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 30,
+              ),
+              CustomTextField(
+                hintText: 'Title',
+              ),
+              CustomTextField(
+                hintText: 'Content',
+                maxLines: 6,
+              ),
+              CustomButton(),
+            ],
+          ),
         ),
       ),
     );
