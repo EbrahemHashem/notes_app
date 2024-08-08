@@ -9,10 +9,9 @@ class NotesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.only(
-        right: 30,
-        left: 30,
+        right: 20,
+        left: 20,
         top: 50,
-        bottom: 20,
       ),
       child: Column(
         children: [
