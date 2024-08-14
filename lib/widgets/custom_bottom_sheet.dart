@@ -29,9 +29,9 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
         builder: (context, state) {
           return AbsorbPointer(
               absorbing: state is AddNoteLoading ? true : false,
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.only(right: 25, left: 25, bottom: MediaQuery.of(context).viewInsets.bottom),
+                child: const SingleChildScrollView(
                   child: AddNoteForm(),
                 ),
               ));
