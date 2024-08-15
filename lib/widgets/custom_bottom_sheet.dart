@@ -18,9 +18,6 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
       create: (context) => AddNoteCubit(),
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
-          if (state is AddNoteFailure) {
-            print('failed ${state.errMessage}');
-          }
           if (state is AddNoteSuccess) {
             Navigator.pop(context);
           }
